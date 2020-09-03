@@ -17,7 +17,7 @@ describe("2) Counting ship number", function(){
       true,  true,  true,  true ,
       false, false, true,  true ];
 
-    expect(core.countSheeps(arra1)).toEqual(17)
+    expect(core.countSheeps(array1)).toEqual(17)
   });
 });
 
