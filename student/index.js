@@ -8,7 +8,7 @@
 // You can assume that all values are integers. Do not mutate the input array/list.
 
 function invert(array) {
-  // TODO 
+  return array.map((num) => num * -1);
 }
 
 
@@ -28,7 +28,9 @@ function invert(array) {
 // The correct answer would be 17.
 
 function countSheeps(arrayOfSheep) {
-  // TODO 
+  return arrayOfSheep.reduce((total, sheep) => {
+    return sheep ? total + 1 : total;
+  }, 0);
 }
 
 
@@ -42,7 +44,12 @@ function countSheeps(arrayOfSheep) {
 // The second value in the first integer array is 0, since the bus is empty in the first bus stop.
 
 function peopleInBus(busStops) {
-  // Good Luck!
+  let total = 0;
+  busStops.forEach((stop) => {
+    const [numberofPeopleEntered, numberofPeopleLeft] = stop;
+    total = total - numberofPeopleLeft + numberofPeopleEntered;
+  });
+  return total;
 }
 
 module.exports = {
